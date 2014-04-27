@@ -1,5 +1,5 @@
-## CAUTION: If Samsung data has been downloaded in current working directory, 
-## please set correct name of zip file to "destfile" variable
+## CAUTION: If 'UCI HAR Dataset' has been downloaded in current working directory, 
+## please set correct name of zip file to "destfile" variable to avoid re-download
 destfile <- "getdata_projectfiles_UCI HAR Dataset.zip"
 if (!file.exists(destfile)) {
   download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", destfile, method="curl")
@@ -11,7 +11,7 @@ if (!require(plyr)) {
   library(plyr)
 }
 
-## Load "reshape2" liabrary
+## Load "reshape2" library
 if (!require(reshape2)) {
   install.packages("reshape2")
   library(reshape2)
